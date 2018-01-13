@@ -1,6 +1,5 @@
 from flask import Flask
 from flask import render_template
-from flask import Response
 from flask import send_file
 
 app = Flask(__name__)
@@ -11,7 +10,7 @@ def index():
 
 @app.route('/sw.js', methods=['GET'])
 def sw():
-    return app.send_static_file('sw.js')
+    return send_file('static/js/sw.js', mimetype='text/javascript')
 
 
 if __name__=='__main__':

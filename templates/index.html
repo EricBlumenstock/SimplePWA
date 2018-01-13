@@ -6,12 +6,13 @@
 </head>
 <body>
     <h1>Hello World!</h1>
+    <img src="../static/img/45-1.png"/>
 </body>
     <script type="text/javascript" src="../static/js/app.js"></script>
-	<script type="text/javascript">
+    <script type="text/javascript">
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function() {
-                navigator.serviceWorker.register("../sw.js").then(function(registration) {
+                navigator.serviceWorker.register("/sw.js").then(function(registration) {
                     // Registration was successful
                     console.log('ServiceWorker registration successful with scope: ', registration.scope);
                 }, function(err) {
